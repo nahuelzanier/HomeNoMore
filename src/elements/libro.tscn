@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://c52xaljck6uem"]
+
+[ext_resource type="Texture2D" uid="uid://cldclofm85tg8" path="res://assets/libro cerrado.png" id="1_w6hir"]
+[ext_resource type="Texture2D" uid="uid://drma5emw1wcv4" path="res://assets/lbro.png" id="2_gl210"]
+[ext_resource type="PackedScene" uid="uid://b1kh88so136n7" path="res://src/elements/element.tscn" id="3_gl210"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wq61u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_w6hir")
+}],
+"loop": 1,
+"name": &"closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_gl210")
+}],
+"loop": 1,
+"name": &"open",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gl210"]
+size = Vector2(44, 47)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_wq61u"]
+
+[node name="Libro" type="Node2D" unique_id=1227931376]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1605313724]
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_wq61u")
+animation = &"closed"
+
+[node name="Element" parent="." unique_id=1051786103 instance=ExtResource("3_gl210")]
+collision_layer = 4
+collision_mask = 0
+element_name = "Libro"
+examinar_text = "Un libro viejo de tapa dura, con páginas amarillentas y algunas arrancadas."
+juzgar_text = "No sé si debería leerlo. Algo me dice que no me va a gustar lo que dice."
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Element" unique_id=2116556532]
+shape = SubResource("RectangleShape2D_gl210")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=1662751001]
+occluder = SubResource("OccluderPolygon2D_wq61u")

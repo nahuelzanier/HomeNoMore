@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://dlgoxesmdqyph"]
+
+[ext_resource type="PackedScene" uid="uid://c26ied6adw5qx" path="res://src/room.tscn" id="1_3msxb"]
+[ext_resource type="Script" uid="uid://clo2bbpryuyn2" path="res://src/mouse_area.gd" id="1_bs6l1"]
+[ext_resource type="PackedScene" uid="uid://bk5upsl24q4ql" path="res://src/player.tscn" id="2_xq6wo"]
+[ext_resource type="PackedScene" uid="uid://6s0uys3wgcv3" path="res://src/elements/rata.tscn" id="4_4bcji"]
+[ext_resource type="PackedScene" uid="uid://mxpxi4k2cx0j" path="res://src/elements/silla.tscn" id="4_cdx1q"]
+[ext_resource type="PackedScene" uid="uid://6ramntwsm42u" path="res://src/elements/cajonera.tscn" id="4_ns0lu"]
+[ext_resource type="PackedScene" uid="uid://c1jbxxqurdoxc" path="res://src/elements/mesa.tscn" id="5_bs6l1"]
+[ext_resource type="PackedScene" uid="uid://3ghu7cqt0uef" path="res://src/elements/sillon.tscn" id="5_pk08u"]
+[ext_resource type="PackedScene" uid="uid://bcodgb8eswms6" path="res://src/elements/skull.tscn" id="6_wqvko"]
+[ext_resource type="PackedScene" uid="uid://d1tkchta0tuhx" path="res://src/elements/llave_grande.tscn" id="9_uktfx"]
+[ext_resource type="PackedScene" uid="uid://bnjf5twslq7kv" path="res://src/elements/llave_chica.tscn" id="10_y2hwx"]
+[ext_resource type="PackedScene" uid="uid://clrjul57e2gm6" path="res://src/elements/anillo.tscn" id="11_qiocs"]
+[ext_resource type="PackedScene" uid="uid://c52xaljck6uem" path="res://src/elements/libro.tscn" id="12_xdrfk"]
+[ext_resource type="PackedScene" uid="uid://c581b08qgqljp" path="res://src/elements/espejo.tscn" id="13_g3j30"]
+[ext_resource type="PackedScene" uid="uid://dj0rblgcax1y5" path="res://src/elements/candelero.tscn" id="14_a7soy"]
+[ext_resource type="PackedScene" uid="uid://bfksirs7wbr42" path="res://src/elements/cofre.tscn" id="15_aikvj"]
+[ext_resource type="PackedScene" uid="uid://cqhq8b7gcbp6c" path="res://src/elements/puerta.tscn" id="17_b6dhc"]
+[ext_resource type="PackedScene" uid="uid://brpcclxpx0bwl" path="res://src/elements/candado.tscn" id="17_tqu6b"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wq61u"]
+radius = 3.0
+
+[node name="Game" type="Node2D" unique_id=950554728]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1217105978]
+color = Color(0.3665946, 0.3665946, 0.36659458, 1)
+
+[node name="MouseArea" type="Area2D" parent="." unique_id=1508582377]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_bs6l1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MouseArea" unique_id=1437938996]
+shape = SubResource("CircleShape2D_wq61u")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=830264167]
+
+[node name="Room" parent="." unique_id=464916318 node_paths=PackedStringArray("camera") instance=ExtResource("1_3msxb")]
+camera = NodePath("../Camera2D")
+
+[node name="Room2" parent="." unique_id=199078625 node_paths=PackedStringArray("camera") instance=ExtResource("1_3msxb")]
+position = Vector2(-1368, 0)
+camera = NodePath("../Camera2D")
+
+[node name="Elements" type="Node2D" parent="." unique_id=2026056419]
+
+[node name="Cajonera" parent="Elements" unique_id=770608147 instance=ExtResource("4_ns0lu")]
+position = Vector2(1135, 188)
+rotation = 1.5707964
+
+[node name="Rata" parent="Elements" unique_id=205237972 instance=ExtResource("4_4bcji")]
+position = Vector2(298, 320)
+
+[node name="Silla" parent="Elements" unique_id=1542240656 instance=ExtResource("4_cdx1q")]
+position = Vector2(717, 144)
+
+[node name="Mesa" parent="Elements" unique_id=1051786103 instance=ExtResource("5_bs6l1")]
+position = Vector2(549, 144)
+
+[node name="Sillon" parent="Elements" unique_id=554640277 instance=ExtResource("5_pk08u")]
+position = Vector2(823, 427)
+
+[node name="Skull" parent="Elements" unique_id=671778271 instance=ExtResource("6_wqvko")]
+position = Vector2(603, 157)
+
+[node name="LlaveGrande" parent="Elements" unique_id=553199783 instance=ExtResource("9_uktfx")]
+position = Vector2(506, 153)
+
+[node name="LlaveChica" parent="Elements" unique_id=834503186 instance=ExtResource("10_y2hwx")]
+position = Vector2(703, 170)
+
+[node name="Anillo" parent="Elements" unique_id=1164073330 instance=ExtResource("11_qiocs")]
+position = Vector2(749, 456)
+
+[node name="Libro" parent="Elements" unique_id=1227931376 instance=ExtResource("12_xdrfk")]
+position = Vector2(501, 482)
+
+[node name="Espejo" parent="Elements" unique_id=788358981 instance=ExtResource("13_g3j30")]
+position = Vector2(149, 55)
+
+[node name="Candelero" parent="Elements" unique_id=1935955344 instance=ExtResource("14_a7soy")]
+position = Vector2(477, 83)
+
+[node name="Cofre" parent="Elements" unique_id=911820675 instance=ExtResource("15_aikvj")]
+position = Vector2(846, 615)
+
+[node name="Candado" parent="Elements" unique_id=2095320705 instance=ExtResource("17_tqu6b")]
+position = Vector2(1117, 135)
+
+[node name="Puerta" parent="Elements" unique_id=713235711 instance=ExtResource("17_b6dhc")]
+position = Vector2(-53, 302)
+rotation = 1.5707964
+
+[node name="Player" parent="." unique_id=1711795095 instance=ExtResource("2_xq6wo")]
+position = Vector2(551, 329)
+
+[connection signal="body_entered" from="MouseArea" to="MouseArea" method="_on_body_entered"]
+[connection signal="body_exited" from="MouseArea" to="MouseArea" method="_on_body_exited"]

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c1jbxxqurdoxc"]
+
+[ext_resource type="PackedScene" uid="uid://b1kh88so136n7" path="res://src/elements/element.tscn" id="2_lxwcj"]
+[ext_resource type="Texture2D" uid="uid://dhbfcr5p4sisw" path="res://assets/mesa.png" id="2_rmkba"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wq61u"]
+size = Vector2(206, 132)
+
+[node name="Mesa" type="Node2D" unique_id=2145034749]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1099169863]
+texture = ExtResource("2_rmkba")
+
+[node name="Element" parent="." unique_id=1051786103 instance=ExtResource("2_lxwcj")]
+element_name = "Mesa"
+examinar_text = "Una mesa cubierta de polvo, con marcas de arañazos en la superficie."
+juzgar_text = "No sé por qué, pero no quiero tocarla más de lo necesario."
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Element" unique_id=798753316]
+position = Vector2(0, -9)
+shape = SubResource("RectangleShape2D_wq61u")

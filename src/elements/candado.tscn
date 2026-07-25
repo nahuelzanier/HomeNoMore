@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://brpcclxpx0bwl"]
+
+[ext_resource type="Texture2D" uid="uid://ivngfqy80wab" path="res://assets/candado abierto.png" id="1_dohct"]
+[ext_resource type="Texture2D" uid="uid://bxgy8psmlwya5" path="res://assets/candado.png" id="2_46r2b"]
+[ext_resource type="PackedScene" uid="uid://b1kh88so136n7" path="res://src/elements/element.tscn" id="3_46r2b"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wq61u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_dohct")
+}],
+"loop": 1,
+"name": &"abierto",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_46r2b")
+}],
+"loop": 1,
+"name": &"cerrado",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7j5g0"]
+radius = 23.0
+height = 60.0
+
+[node name="Candado" type="Node2D" unique_id=2095320705]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=261069234]
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_wq61u")
+animation = &"cerrado"
+
+[node name="Element" parent="." unique_id=1051786103 instance=ExtResource("3_46r2b")]
+collision_layer = 4
+collision_mask = 0
+element_name = "Candado"
+examinar_text = "Un candado de hierro oxidado. Voy a necesitar la llave correcta para abrirlo."
+juzgar_text = "Alguien no quería que esto se abriera fácilmente."
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Element" unique_id=1010240340]
+position = Vector2(1, 1)
+shape = SubResource("CapsuleShape2D_7j5g0")

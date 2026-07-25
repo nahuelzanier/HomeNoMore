@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://3ghu7cqt0uef"]
+
+[ext_resource type="PackedScene" uid="uid://b1kh88so136n7" path="res://src/elements/element.tscn" id="1_bif7l"]
+[ext_resource type="Texture2D" uid="uid://b7slcn1ni3ok6" path="res://assets/sillon.png" id="2_vmml0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wq61u"]
+size = Vector2(276, 136)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_wq61u"]
+polygon = PackedVector2Array(-136, -64, 136, -65, 141, -51, -141, -50)
+
+[node name="Sillon" type="Node2D" unique_id=554640277]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1478435508]
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("2_vmml0")
+
+[node name="Element" parent="." unique_id=1051786103 instance=ExtResource("1_bif7l")]
+element_name = "Sillon"
+examinar_text = "Un sillón viejo, con la tela desgastada y manchada."
+juzgar_text = "Me incomoda pensar en quién se sentó aquí por última vez."
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Element" unique_id=1551667734]
+position = Vector2(-1, 3)
+shape = SubResource("RectangleShape2D_wq61u")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=361936167]
+occluder = SubResource("OccluderPolygon2D_wq61u")

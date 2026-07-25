@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://mxpxi4k2cx0j"]
+
+[ext_resource type="PackedScene" uid="uid://b1kh88so136n7" path="res://src/elements/element.tscn" id="1_5uvqg"]
+[ext_resource type="Texture2D" uid="uid://c7t10jgv4umn5" path="res://assets/silla.png" id="2_f7gkd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wq61u"]
+radius = 51.156624
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_wq61u"]
+polygon = PackedVector2Array(-10, -65, 24, -47, 56, -14, 60, -18, 29, -49, -7, -70)
+
+[node name="Silla" type="Node2D" unique_id=1542240656]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1927691029]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_f7gkd")
+
+[node name="Element" parent="." unique_id=1051786103 instance=ExtResource("1_5uvqg")]
+element_name = "Silla"
+examinar_text = "Una silla de madera con el respaldo tallado a mano."
+juzgar_text = "Parece que nadie se ha sentado aquí en años."
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Element" unique_id=637905440]
+shape = SubResource("CircleShape2D_wq61u")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=895076837]
+occluder = SubResource("OccluderPolygon2D_wq61u")

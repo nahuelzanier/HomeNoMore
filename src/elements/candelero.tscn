@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://dj0rblgcax1y5"]
+
+[ext_resource type="Texture2D" uid="uid://dbuetcgkcbfrj" path="res://assets/candelero_apagado.png" id="1_xkj5o"]
+[ext_resource type="Texture2D" uid="uid://bl1n1cq7bx0vh" path="res://assets/candelero_prendido.png" id="2_c443x"]
+[ext_resource type="PackedScene" uid="uid://b1kh88so136n7" path="res://src/elements/element.tscn" id="3_c443x"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wq61u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_xkj5o")
+}],
+"loop": 1,
+"name": &"apagada",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_c443x")
+}],
+"loop": 1,
+"name": &"prendida",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wq61u"]
+radius = 48.6621
+
+[node name="Candelero" type="Node2D" unique_id=1935955344]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=163120053]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_wq61u")
+animation = &"apagada"
+
+[node name="Element" parent="." unique_id=1051786103 instance=ExtResource("3_c443x")]
+element_name = "Candela"
+examinar_text = "Un candelero de bronce, con cera derretida acumulada en la base."
+juzgar_text = "La cera todavía está tibia. Alguien estuvo aquí hace poco."
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Element" unique_id=1474081809]
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CircleShape2D_wq61u")

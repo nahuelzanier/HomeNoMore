@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bcodgb8eswms6"]
+
+[ext_resource type="Texture2D" uid="uid://0od803my55un" path="res://assets/skull.png" id="1_pmje4"]
+[ext_resource type="PackedScene" uid="uid://b1kh88so136n7" path="res://src/elements/element.tscn" id="2_6ketk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wq61u"]
+radius = 30.066593
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_wq61u"]
+polygon = PackedVector2Array(-21, -7, -12, -7, -3, 1, 5, 6, 12, 11, 14, 18, 13, 4, -7, -12)
+
+[node name="Skull" type="Node2D" unique_id=671778271]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1593623163]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_pmje4")
+
+[node name="Element" parent="." unique_id=1051786103 instance=ExtResource("2_6ketk")]
+element_name = "Calavera"
+examinar_text = "Una calavera humana, amarillenta por el paso del tiempo."
+juzgar_text = "Esto confirma que esta casa esconde algo peor de lo que imaginaba."
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Element" unique_id=491657299]
+shape = SubResource("CircleShape2D_wq61u")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=719845784]
+occluder = SubResource("OccluderPolygon2D_wq61u")

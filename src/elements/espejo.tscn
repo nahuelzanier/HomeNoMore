@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://c581b08qgqljp"]
+
+[ext_resource type="Texture2D" uid="uid://c4bdmlsu6rfrk" path="res://assets/espejo_roto.png" id="1_w16eo"]
+[ext_resource type="Texture2D" uid="uid://odxfnarca6cj" path="res://assets/espejo.png" id="1_xhsxm"]
+[ext_resource type="PackedScene" uid="uid://b1kh88so136n7" path="res://src/elements/element.tscn" id="2_w16eo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wq61u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_w16eo")
+}],
+"loop": 1,
+"name": &"roto",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_xhsxm")
+}],
+"loop": 1,
+"name": &"sano",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wq61u"]
+size = Vector2(126, 47)
+
+[node name="Espejo" type="Node2D" unique_id=788358981]
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1549301594]
+sprite_frames = SubResource("SpriteFrames_wq61u")
+animation = &"sano"
+
+[node name="Element" parent="." unique_id=1051786103 instance=ExtResource("2_w16eo")]
+collision_layer = 4
+collision_mask = 0
+element_name = "Espejo"
+examinar_text = "Un espejo con el marco tallado, agrietado en una esquina."
+juzgar_text = "Por un segundo, juraría que mi reflejo se movió distinto a mí."
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Element" unique_id=640280254]
+position = Vector2(-1, 13.5)
+shape = SubResource("RectangleShape2D_wq61u")

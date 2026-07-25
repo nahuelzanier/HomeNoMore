@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://bfksirs7wbr42"]
+
+[ext_resource type="Texture2D" uid="uid://brinlvxfusxoc" path="res://assets/cofre abierto.png" id="1_osxqk"]
+[ext_resource type="Texture2D" uid="uid://dg10ddmjwets3" path="res://assets/cofre cerrado.png" id="2_xwup5"]
+[ext_resource type="PackedScene" uid="uid://b1kh88so136n7" path="res://src/elements/element.tscn" id="3_xwup5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wq61u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_osxqk")
+}],
+"loop": 1,
+"name": &"abierto",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xwup5")
+}],
+"loop": 1,
+"name": &"cerrado",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wq61u"]
+size = Vector2(72, 49)
+
+[node name="Cofre" type="Node2D" unique_id=911820675]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=170670161]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_wq61u")
+animation = &"cerrado"
+
+[node name="Element" parent="." unique_id=1051786103 instance=ExtResource("3_xwup5")]
+position = Vector2(1, -1)
+element_name = "Cofre"
+examinar_text = "Un cofre de madera reforzado con placas metálicas, cerrado con un candado."
+juzgar_text = "Sea lo que sea que guarda, no creo que lo pusieron ahí para protegerlo. Lo pusieron ahí para esconderlo."
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Element" unique_id=192151640]
+position = Vector2(-1, 9.5)
+shape = SubResource("RectangleShape2D_wq61u")

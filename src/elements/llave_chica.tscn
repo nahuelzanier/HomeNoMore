@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bnjf5twslq7kv"]
+
+[ext_resource type="Texture2D" uid="uid://e4btsu38m54m" path="res://assets/llave.png" id="1_m0vge"]
+[ext_resource type="PackedScene" uid="uid://b1kh88so136n7" path="res://src/elements/element.tscn" id="2_gmpnl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7j5g0"]
+radius = 17.117243
+
+[node name="LlaveChica" type="Node2D" unique_id=834503186]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1882064398]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_m0vge")
+
+[node name="Element" parent="." unique_id=1051786103 instance=ExtResource("2_gmpnl")]
+collision_layer = 4
+collision_mask = 0
+element_name = "Llave"
+examinar_text = "Una llave pequeña y delicada, probablemente de un cofre o un cajón."
+juzgar_text = "Espero que abra algo que valga la pena el riesgo."
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Element" unique_id=629274069]
+position = Vector2(-2, -5)
+shape = SubResource("CircleShape2D_7j5g0")

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://cqhq8b7gcbp6c"]
+
+[ext_resource type="Texture2D" uid="uid://qauprqduvgvf" path="res://assets/puerta cerrada.png" id="1_cb86y"]
+[ext_resource type="PackedScene" uid="uid://b1kh88so136n7" path="res://src/elements/element.tscn" id="2_lqkda"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wq61u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_cb86y")
+}],
+"loop": 1,
+"name": &"cerrada",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wq61u"]
+size = Vector2(166, 108)
+
+[node name="Puerta" type="Node2D" unique_id=713235711]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=338315735]
+sprite_frames = SubResource("SpriteFrames_wq61u")
+animation = &"cerrada"
+
+[node name="Element" parent="." unique_id=1051786103 instance=ExtResource("2_lqkda")]
+element_name = "Puerta"
+examinar_text = "Una puerta de madera maciza. Está cerrada."
+juzgar_text = "No quiero saber qué hay del otro lado. Pero tengo que averiguarlo."
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Element" unique_id=617165614]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_wq61u")

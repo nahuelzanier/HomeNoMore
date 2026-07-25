@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://clrjul57e2gm6"]
+
+[ext_resource type="Texture2D" uid="uid://be2g4jgwpuydi" path="res://assets/anillo.png" id="1_uvkq6"]
+[ext_resource type="PackedScene" uid="uid://b1kh88so136n7" path="res://src/elements/element.tscn" id="2_arg6o"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wq61u"]
+radius = 16.03122
+
+[node name="Anillo" type="Node2D" unique_id=1164073330]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=217205732]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_uvkq6")
+
+[node name="Element" parent="." unique_id=1051786103 instance=ExtResource("2_arg6o")]
+collision_layer = 4
+collision_mask = 0
+element_name = "Anillo"
+examinar_text = "Un anillo de oro deslustrado, con un grabado casi ilegible."
+juzgar_text = "Alguien lo dejó aquí a propósito. Nadie olvida un anillo así."
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Element" unique_id=862024580]
+shape = SubResource("CircleShape2D_wq61u")

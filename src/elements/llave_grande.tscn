@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://d1tkchta0tuhx"]
+
+[ext_resource type="Texture2D" uid="uid://cvt5nu6pxp15v" path="res://assets/llave 2.png" id="1_owtlv"]
+[ext_resource type="PackedScene" uid="uid://b1kh88so136n7" path="res://src/elements/element.tscn" id="2_dhv0f"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wq61u"]
+radius = 14.0
+height = 70.0
+
+[node name="LlaveGrande" type="Node2D" unique_id=553199783]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1662146407]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_owtlv")
+
+[node name="Element" parent="." unique_id=1051786103 instance=ExtResource("2_dhv0f")]
+collision_layer = 4
+collision_mask = 0
+element_name = "Llave"
+examinar_text = "Una llave grande y pesada, de hierro forjado."
+juzgar_text = "Se siente fría al tacto. Demasiado fría."
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Element" unique_id=263053023]
+shape = SubResource("CapsuleShape2D_wq61u")
