@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://ddxhw5d3urcy3"]
+
+[ext_resource type="Script" uid="uid://dbxssmtwcmahy" path="res://src/elements/element_empty.gd" id="1_p5xs8"]
+
+[node name="ElementEmpty" type="StaticBody2D" unique_id=1051786103]
+collision_layer = 5
+script = ExtResource("1_p5xs8")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2076387278]
+follow_viewport_enabled = true
+
+[node name="PopupMenu" type="PopupMenu" parent="CanvasLayer" unique_id=385595654]
+
+[node name="PopDireccion" type="PopupMenu" parent="CanvasLayer" unique_id=1302264650]
+oversampling_override = 1.0
+
+[connection signal="id_pressed" from="CanvasLayer/PopupMenu" to="." method="_on_popup_menu_id_pressed"]
+[connection signal="id_pressed" from="CanvasLayer/PopDireccion" to="." method="_on_pop_direccion_id_pressed"]

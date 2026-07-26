@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene format=3 uid="uid://hf82bf4n6e20"]
 
-[ext_resource type="Script" path="res://src/global/dialogue_ui.gd" id="1_dlgui"]
+[ext_resource type="Script" uid="uid://cpvop4wn1w4p" path="res://src/global/dialogue_ui.gd" id="1_dlgui"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dlgui"]
 bg_color = Color(0.05, 0.05, 0.05, 0.85)
@@ -14,11 +14,11 @@ corner_radius_top_right = 6
 corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
 
-[node name="DialogueUI" type="CanvasLayer"]
+[node name="DialogueUI" type="CanvasLayer" unique_id=1741346726]
 layer = 10
 script = ExtResource("1_dlgui")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=1506404954]
 visible = false
 anchors_preset = 12
 anchor_top = 1.0
@@ -32,8 +32,8 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_dlgui")
 
-[node name="Label" type="Label" parent="Panel"]
-anchors_preset = 15
+[node name="Label" type="Label" parent="Panel" unique_id=432872]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 20.0
@@ -44,6 +44,5 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.9, 0.87, 0.8, 1)
 theme_override_font_sizes/font_size = 20
-text = ""
-autowrap_mode = 3
 vertical_alignment = 1
+autowrap_mode = 3

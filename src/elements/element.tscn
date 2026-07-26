@@ -5,6 +5,13 @@
 [node name="Element" type="StaticBody2D" unique_id=1051786103]
 collision_layer = 5
 script = ExtResource("1_cuhl6")
+examinar_text = "No veo nada en particular..."
+juzgar_text = "El aire de este lugar es denso..."
+abrir_text = "Veamos que hay aqui."
+cerrar_text = "Mejor cerremos esto."
+golpear_text = "Knock Knock..."
+mover_text = "No me pagan lo suficiente para esto..."
+recolectar_text = "El que lo encuentra..."
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2076387278]
 

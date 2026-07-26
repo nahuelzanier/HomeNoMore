@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c26h0nh85i2rv"]
+
+[ext_resource type="Texture2D" uid="uid://b7cwgy2ejswnh" path="res://assets/alfombra.png" id="1_81x1v"]
+[ext_resource type="PackedScene" uid="uid://b1kh88so136n7" path="res://src/elements/element.tscn" id="2_ei87r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wq61u"]
+size = Vector2(160, 255)
+
+[node name="Alfombra" type="Node2D" unique_id=106523908]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=427940969]
+position = Vector2(-6, -2)
+texture = ExtResource("1_81x1v")
+
+[node name="Element" parent="." unique_id=1051786103 instance=ExtResource("2_ei87r")]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Element" unique_id=91234106]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_wq61u")

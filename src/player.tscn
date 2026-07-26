@@ -31,6 +31,13 @@ func _physics_process(delta):
 			global_rotation = lerp_angle(global_rotation, target_angle, 1.5 * delta)
 
 			move_and_slide()
+
+
+func _on_back_body_entered(body: Node2D) -> void:
+	body.at_players_back = true
+
+func _on_back_body_exited(body: Node2D) -> void:
+	body.at_players_back = false
 "
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wq61u"]
@@ -59,6 +66,9 @@ animations = [{
 radius = 37.64306
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7j5g0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bktlc"]
+size = Vector2(125, 104)
 
 [node name="Player" type="CharacterBody2D" unique_id=1263726939]
 script = SubResource("GDScript_rc2ur")
@@ -92,3 +102,15 @@ shadow_filter = 1
 texture = ExtResource("4_bktlc")
 offset = Vector2(9, -238)
 texture_scale = 2.0
+
+[node name="Back" type="Area2D" parent="." unique_id=276942807]
+position = Vector2(-107, 0)
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Back" unique_id=1593175343]
+position = Vector2(-10.5, 0)
+shape = SubResource("RectangleShape2D_bktlc")
+
+[connection signal="body_entered" from="Back" to="." method="_on_back_body_entered"]
+[connection signal="body_exited" from="Back" to="." method="_on_back_body_exited"]

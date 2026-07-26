@@ -37,6 +37,7 @@ action={
 [layer_names]
 
 2d_physics/layer_1="Pyhsics"
+2d_physics/layer_2="Back Area"
 2d_physics/layer_3="Elements"
 2d_physics/layer_4="Room"
 

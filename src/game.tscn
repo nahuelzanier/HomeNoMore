@@ -1,14 +1,18 @@
 [gd_scene format=3 uid="uid://dlgoxesmdqyph"]
 
 [ext_resource type="PackedScene" uid="uid://c26ied6adw5qx" path="res://src/room.tscn" id="1_3msxb"]
+[ext_resource type="Script" uid="uid://ypkakx1uuk7l" path="res://src/game.gd" id="1_6fytc"]
 [ext_resource type="Script" uid="uid://clo2bbpryuyn2" path="res://src/mouse_area.gd" id="1_bs6l1"]
+[ext_resource type="PackedScene" uid="uid://ddxhw5d3urcy3" path="res://src/elements/element_empty.tscn" id="2_b6dhc"]
 [ext_resource type="PackedScene" uid="uid://bk5upsl24q4ql" path="res://src/player.tscn" id="2_xq6wo"]
 [ext_resource type="PackedScene" uid="uid://6s0uys3wgcv3" path="res://src/elements/rata.tscn" id="4_4bcji"]
 [ext_resource type="PackedScene" uid="uid://mxpxi4k2cx0j" path="res://src/elements/silla.tscn" id="4_cdx1q"]
 [ext_resource type="PackedScene" uid="uid://6ramntwsm42u" path="res://src/elements/cajonera.tscn" id="4_ns0lu"]
+[ext_resource type="PackedScene" uid="uid://c26h0nh85i2rv" path="res://src/elements/alfombra.tscn" id="4_sv437"]
 [ext_resource type="PackedScene" uid="uid://c1jbxxqurdoxc" path="res://src/elements/mesa.tscn" id="5_bs6l1"]
 [ext_resource type="PackedScene" uid="uid://3ghu7cqt0uef" path="res://src/elements/sillon.tscn" id="5_pk08u"]
 [ext_resource type="PackedScene" uid="uid://bcodgb8eswms6" path="res://src/elements/skull.tscn" id="6_wqvko"]
+[ext_resource type="PackedScene" uid="uid://llj653k81lm0" path="res://src/elements/chimenea.tscn" id="7_lslma"]
 [ext_resource type="PackedScene" uid="uid://d1tkchta0tuhx" path="res://src/elements/llave_grande.tscn" id="9_uktfx"]
 [ext_resource type="PackedScene" uid="uid://bnjf5twslq7kv" path="res://src/elements/llave_chica.tscn" id="10_y2hwx"]
 [ext_resource type="PackedScene" uid="uid://clrjul57e2gm6" path="res://src/elements/anillo.tscn" id="11_qiocs"]
@@ -19,10 +23,89 @@
 [ext_resource type="PackedScene" uid="uid://cqhq8b7gcbp6c" path="res://src/elements/puerta.tscn" id="17_b6dhc"]
 [ext_resource type="PackedScene" uid="uid://brpcclxpx0bwl" path="res://src/elements/candado.tscn" id="17_tqu6b"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6fytc"]
+size = Vector2(2738.375, 88)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sv437"]
+size = Vector2(1579, 79)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wq61u"]
+size = Vector2(919.125, 78)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7j5g0"]
+size = Vector2(78, 1196)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8xyew"]
+size = Vector2(369, 171)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6q16b"]
+size = Vector2(1375, 172)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ktmj5"]
+size = Vector2(48, 177)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eka03"]
+size = Vector2(74, 1197)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hhrcy"]
+size = Vector2(130.5, 173)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dogsu"]
+size = Vector2(173, 153)
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_wq61u"]
 radius = 3.0
 
 [node name="Game" type="Node2D" unique_id=950554728]
+script = ExtResource("1_6fytc")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=262547860]
+z_index = 10
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=638163739]
+position = Vector2(-98.1875, 1324)
+shape = SubResource("RectangleShape2D_6fytc")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1615729072]
+position = Vector2(-679.5, 40.5)
+shape = SubResource("RectangleShape2D_sv437")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1240489056]
+position = Vector2(809.5625, 47)
+shape = SubResource("RectangleShape2D_wq61u")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=82401901]
+position = Vector2(1231, 684)
+shape = SubResource("RectangleShape2D_7j5g0")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=383721086]
+position = Vector2(1005.5, 682.5)
+shape = SubResource("RectangleShape2D_8xyew")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" unique_id=735962841]
+position = Vector2(-342.5, 681)
+shape = SubResource("RectangleShape2D_6q16b")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D" unique_id=7216988]
+position = Vector2(576, 683.5)
+shape = SubResource("RectangleShape2D_ktmj5")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D" unique_id=199866994]
+position = Vector2(-1428, 679.5)
+shape = SubResource("RectangleShape2D_eka03")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D" unique_id=2052400210]
+position = Vector2(-1323, 682.5)
+shape = SubResource("RectangleShape2D_hhrcy")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D" unique_id=411905901]
+position = Vector2(-96.5, 847)
+shape = SubResource("RectangleShape2D_dogsu")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D" unique_id=711248589]
+position = Vector2(-99, 1202.5)
+shape = SubResource("RectangleShape2D_dogsu")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1217105978]
 color = Color(0.3665946, 0.3665946, 0.36659458, 1)
@@ -35,66 +118,253 @@ script = ExtResource("1_bs6l1")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MouseArea" unique_id=1437938996]
 shape = SubResource("CircleShape2D_wq61u")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=830264167]
+[node name="ElementEmpty" parent="MouseArea" unique_id=1051786103 instance=ExtResource("2_b6dhc")]
 
-[node name="Room" parent="." unique_id=464916318 node_paths=PackedStringArray("camera") instance=ExtResource("1_3msxb")]
+[node name="Room1" parent="." unique_id=464916318 node_paths=PackedStringArray("camera") instance=ExtResource("1_3msxb")]
 camera = NodePath("../Camera2D")
 
 [node name="Room2" parent="." unique_id=199078625 node_paths=PackedStringArray("camera") instance=ExtResource("1_3msxb")]
 position = Vector2(-1368, 0)
 camera = NodePath("../Camera2D")
 
+[node name="Room3" parent="." unique_id=848949027 node_paths=PackedStringArray("camera") instance=ExtResource("1_3msxb")]
+position = Vector2(-1368, 685)
+camera = NodePath("../Camera2D")
+
+[node name="Room4" parent="." unique_id=2015807713 node_paths=PackedStringArray("camera") instance=ExtResource("1_3msxb")]
+position = Vector2(1, 685)
+camera = NodePath("../Camera2D")
+
 [node name="Elements" type="Node2D" parent="." unique_id=2026056419]
 
-[node name="Cajonera" parent="Elements" unique_id=770608147 instance=ExtResource("4_ns0lu")]
-position = Vector2(1135, 188)
+[node name="Alfombra1" parent="Elements" unique_id=106523908 instance=ExtResource("4_sv437")]
+position = Vector2(-299, 1029)
+
+[node name="Alfombra3" parent="Elements" unique_id=936500239 instance=ExtResource("4_sv437")]
+position = Vector2(-1219, 407.99997)
+rotation = 0.30543262
+
+[node name="Anillo1" parent="Elements" unique_id=1164073330 instance=ExtResource("11_qiocs")]
+position = Vector2(635, 421)
+
+[node name="Alfombra2" parent="Elements" unique_id=166860033 instance=ExtResource("4_sv437")]
+position = Vector2(544, 397)
 rotation = 1.5707964
 
-[node name="Rata" parent="Elements" unique_id=205237972 instance=ExtResource("4_4bcji")]
-position = Vector2(298, 320)
+[node name="Cajonera1" parent="Elements" unique_id=770608147 instance=ExtResource("4_ns0lu")]
+position = Vector2(1128, 189)
+rotation = 1.5707964
+requires_back = true
 
-[node name="Silla" parent="Elements" unique_id=1542240656 instance=ExtResource("4_cdx1q")]
+[node name="Cajonera2" parent="Elements" unique_id=1706228757 instance=ExtResource("4_ns0lu")]
+position = Vector2(1128, 501)
+rotation = 1.5707964
+
+[node name="Cajonera3" parent="Elements" unique_id=339212482 instance=ExtResource("4_ns0lu")]
+position = Vector2(-1178, 156)
+
+[node name="Cofre1" parent="Elements" unique_id=911820675 instance=ExtResource("15_aikvj")]
+position = Vector2(1215, 343)
+rotation = 4.712389
+
+[node name="Sillon1" parent="Elements" unique_id=554640277 instance=ExtResource("5_pk08u")]
+position = Vector2(-799, 1019)
+
+[node name="Chimenea1" parent="Elements" unique_id=266554114 instance=ExtResource("7_lslma")]
+position = Vector2(-791, 1264)
+rotation = -3.1415925
+
+[node name="Silla1" parent="Elements" unique_id=1542240656 instance=ExtResource("4_cdx1q")]
 position = Vector2(717, 144)
 
-[node name="Mesa" parent="Elements" unique_id=1051786103 instance=ExtResource("5_bs6l1")]
+[node name="Silla2" parent="Elements" unique_id=735932536 instance=ExtResource("4_cdx1q")]
+position = Vector2(-618, 334)
+
+[node name="Silla3" parent="Elements" unique_id=2033433796 instance=ExtResource("4_cdx1q")]
+position = Vector2(1155, 789)
+
+[node name="Libro1" parent="Elements" unique_id=1227931376 instance=ExtResource("12_xdrfk")]
+position = Vector2(428, 467)
+rotation = 0.5235988
+
+[node name="Espejo3" parent="Elements" unique_id=1195662815 instance=ExtResource("13_g3j30")]
+position = Vector2(-1177, 44)
+
+[node name="Anillo2" parent="Elements" unique_id=1507543787 instance=ExtResource("11_qiocs")]
+position = Vector2(-1226, 110)
+rotation = 0.0034906585
+
+[node name="Anillo3" parent="Elements" unique_id=736453670 instance=ExtResource("11_qiocs")]
+position = Vector2(-1138.9999, 90.99997)
+rotation = -0.51487213
+
+[node name="Anillo4" parent="Elements" unique_id=377718623 instance=ExtResource("11_qiocs")]
+position = Vector2(-1199, 126)
+rotation = 0.23212878
+
+[node name="Anillo5" parent="Elements" unique_id=92141201 instance=ExtResource("11_qiocs")]
+position = Vector2(-1120, 151)
+rotation = -0.58119464
+
+[node name="PuertaLocked" parent="Elements" unique_id=713235711 instance=ExtResource("17_b6dhc")]
+position = Vector2(-101, 340)
+rotation = 1.5707964
+locked = true
+
+[node name="Puerta2" parent="Elements" unique_id=322358461 instance=ExtResource("17_b6dhc")]
+position = Vector2(-1146, 683)
+
+[node name="Puerta3" parent="Elements" unique_id=648171853 instance=ExtResource("17_b6dhc")]
+position = Vector2(219, -3)
+
+[node name="Puerta4" parent="Elements" unique_id=23025512 instance=ExtResource("17_b6dhc")]
+position = Vector2(449, 682)
+
+[node name="Puerta5" parent="Elements" unique_id=716640594 instance=ExtResource("17_b6dhc")]
+position = Vector2(702, 682)
+
+[node name="Mesa1" parent="Elements" unique_id=1823295463 instance=ExtResource("5_bs6l1")]
 position = Vector2(549, 144)
 
-[node name="Sillon" parent="Elements" unique_id=554640277 instance=ExtResource("5_pk08u")]
-position = Vector2(823, 427)
+[node name="Mesa2" parent="Elements" unique_id=2145034749 instance=ExtResource("5_bs6l1")]
+position = Vector2(119, 975)
 
-[node name="Skull" parent="Elements" unique_id=671778271 instance=ExtResource("6_wqvko")]
-position = Vector2(603, 157)
+[node name="Mesa3" parent="Elements" unique_id=988550746 instance=ExtResource("5_bs6l1")]
+position = Vector2(807, 960)
 
-[node name="LlaveGrande" parent="Elements" unique_id=553199783 instance=ExtResource("9_uktfx")]
-position = Vector2(506, 153)
+[node name="Mesa4" parent="Elements" unique_id=1313523588 instance=ExtResource("5_bs6l1")]
+position = Vector2(1019, 960)
 
-[node name="LlaveChica" parent="Elements" unique_id=834503186 instance=ExtResource("10_y2hwx")]
-position = Vector2(703, 170)
+[node name="Mesa5" parent="Elements" unique_id=1960376327 instance=ExtResource("5_bs6l1")]
+position = Vector2(121, 1104)
 
-[node name="Anillo" parent="Elements" unique_id=1164073330 instance=ExtResource("11_qiocs")]
-position = Vector2(749, 456)
+[node name="Mesa6" parent="Elements" unique_id=979028580 instance=ExtResource("5_bs6l1")]
+position = Vector2(808, 1089)
 
-[node name="Libro" parent="Elements" unique_id=1227931376 instance=ExtResource("12_xdrfk")]
-position = Vector2(501, 482)
+[node name="Mesa7" parent="Elements" unique_id=1902213721 instance=ExtResource("5_bs6l1")]
+position = Vector2(1019, 1089)
 
-[node name="Espejo" parent="Elements" unique_id=788358981 instance=ExtResource("13_g3j30")]
-position = Vector2(149, 55)
-
-[node name="Candelero" parent="Elements" unique_id=1935955344 instance=ExtResource("14_a7soy")]
-position = Vector2(477, 83)
-
-[node name="Cofre" parent="Elements" unique_id=911820675 instance=ExtResource("15_aikvj")]
-position = Vector2(846, 615)
-
-[node name="Candado" parent="Elements" unique_id=2095320705 instance=ExtResource("17_tqu6b")]
-position = Vector2(1117, 135)
-
-[node name="Puerta" parent="Elements" unique_id=713235711 instance=ExtResource("17_b6dhc")]
-position = Vector2(-53, 302)
+[node name="Alfombra4" parent="Elements" unique_id=1222164988 instance=ExtResource("4_sv437")]
+position = Vector2(914, 1011)
 rotation = 1.5707964
 
+[node name="Libro2" parent="Elements" unique_id=1501814827 instance=ExtResource("12_xdrfk")]
+position = Vector2(749, 928)
+rotation = 0.5235988
+
+[node name="Libro3" parent="Elements" unique_id=1304542390 instance=ExtResource("12_xdrfk")]
+position = Vector2(839, 915)
+rotation = 0.5235988
+
+[node name="Rata1" parent="Elements" unique_id=205237972 instance=ExtResource("4_4bcji")]
+position = Vector2(1124, 328)
+
+[node name="Rata2" parent="Elements" unique_id=1707823899 instance=ExtResource("4_4bcji")]
+position = Vector2(-816, 1128)
+rotation = 1.5707964
+
+[node name="Rata3" parent="Elements" unique_id=1005650769 instance=ExtResource("4_4bcji")]
+position = Vector2(-765, 1145)
+rotation = 1.9285889
+
+[node name="Skull1" parent="Elements" unique_id=671778271 instance=ExtResource("6_wqvko")]
+position = Vector2(1198, 587)
+rotation = 1.134464
+
+[node name="LlaveChica1" parent="Elements" unique_id=228588982 instance=ExtResource("10_y2hwx")]
+position = Vector2(703, 170)
+
+[node name="LlaveChica2" parent="Elements" unique_id=834503186 instance=ExtResource("10_y2hwx")]
+position = Vector2(-710, 1024)
+
+[node name="LlaveChica3" parent="Elements" unique_id=1514283777 instance=ExtResource("10_y2hwx")]
+position = Vector2(-1327, 196)
+
+[node name="Skull2" parent="Elements" unique_id=1679790935 instance=ExtResource("6_wqvko")]
+position = Vector2(-863, 1195)
+rotation = 3.1415927
+
+[node name="Skull3" parent="Elements" unique_id=1431168383 instance=ExtResource("6_wqvko")]
+position = Vector2(-688, 1010)
+
+[node name="Skull4" parent="Elements" unique_id=983782706 instance=ExtResource("6_wqvko")]
+position = Vector2(-730, 1030)
+
+[node name="Skull5" parent="Elements" unique_id=473090966 instance=ExtResource("6_wqvko")]
+position = Vector2(187.99997, 1041)
+rotation = 2.3265238
+
+[node name="Skull6" parent="Elements" unique_id=1364926637 instance=ExtResource("6_wqvko")]
+position = Vector2(138, 1016)
+rotation = -3.1415927
+
+[node name="LlaveGrande1" parent="Elements" unique_id=553199783 instance=ExtResource("9_uktfx")]
+position = Vector2(471, 153)
+
+[node name="LlaveGrande2" parent="Elements" unique_id=754126121 instance=ExtResource("9_uktfx")]
+position = Vector2(506, 153)
+
+[node name="LlaveGrande3" parent="Elements" unique_id=1369169420 instance=ExtResource("9_uktfx")]
+position = Vector2(541, 153)
+
+[node name="Candelero1" parent="Elements" unique_id=1935955344 instance=ExtResource("14_a7soy")]
+position = Vector2(624, 83)
+
+[node name="CandeleroPen1" parent="Elements" unique_id=1990111789 instance=ExtResource("14_a7soy")]
+position = Vector2(-455, 262)
+
+[node name="CandeleroPen2" parent="Elements" unique_id=1424087545 instance=ExtResource("14_a7soy")]
+position = Vector2(-625, 174)
+pentagram_id = 1
+
+[node name="CandeleroPen3" parent="Elements" unique_id=541552250 instance=ExtResource("14_a7soy")]
+position = Vector2(-797, 275)
+pentagram_id = 2
+
+[node name="CandeleroPen4" parent="Elements" unique_id=1088309599 instance=ExtResource("14_a7soy")]
+position = Vector2(-730, 472)
+pentagram_id = 3
+
+[node name="CandeleroPen5" parent="Elements" unique_id=1059745686 instance=ExtResource("14_a7soy")]
+position = Vector2(-512, 463)
+pentagram_id = 4
+
+[node name="Candelero7" parent="Elements" unique_id=1954667066 instance=ExtResource("14_a7soy")]
+position = Vector2(917, 1001)
+
+[node name="Espejo1" parent="Elements" unique_id=788358981 instance=ExtResource("13_g3j30")]
+position = Vector2(-167, 1026)
+rotation = 1.5707964
+
+[node name="Espejo2" parent="Elements" unique_id=657289695 instance=ExtResource("13_g3j30")]
+position = Vector2(-31, 1026)
+rotation = 4.712389
+
+[node name="Candado1" parent="Elements" unique_id=2095320705 instance=ExtResource("17_tqu6b")]
+position = Vector2(153, 76)
+
+[node name="Candado4" parent="Elements" unique_id=1656739551 instance=ExtResource("17_tqu6b")]
+position = Vector2(-1351, 132)
+
+[node name="Candado2" parent="Elements" unique_id=1796209010 instance=ExtResource("17_tqu6b")]
+position = Vector2(220, 72)
+
+[node name="Candado3" parent="Elements" unique_id=1702896336 instance=ExtResource("17_tqu6b")]
+position = Vector2(286, 73)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=830264167]
+position = Vector2(584, 341)
+
 [node name="Player" parent="." unique_id=1711795095 instance=ExtResource("2_xq6wo")]
-position = Vector2(551, 329)
+z_index = 2
+position = Vector2(-1020, 1096)
+rotation = 1.5707964
 
 [connection signal="body_entered" from="MouseArea" to="MouseArea" method="_on_body_entered"]
 [connection signal="body_exited" from="MouseArea" to="MouseArea" method="_on_body_exited"]
+[connection signal="check_lock" from="Elements/PuertaLocked" to="." method="_on_puerta_locked_check_lock"]
+[connection signal="switch" from="Elements/CandeleroPen1" to="." method="_on_candelero_pen_switch"]
+[connection signal="switch" from="Elements/CandeleroPen2" to="." method="_on_candelero_pen_switch"]
+[connection signal="switch" from="Elements/CandeleroPen3" to="." method="_on_candelero_pen_switch"]
+[connection signal="switch" from="Elements/CandeleroPen4" to="." method="_on_candelero_pen_switch"]
+[connection signal="switch" from="Elements/CandeleroPen5" to="." method="_on_candelero_pen_switch"]

@@ -16,6 +16,7 @@ scale = Vector2(0.4, 0.4)
 texture = ExtResource("1_pmje4")
 
 [node name="Element" parent="." unique_id=1051786103 instance=ExtResource("2_6ketk")]
+collectible = true
 element_name = "Calavera"
 examinar_text = "Una calavera humana, amarillenta por el paso del tiempo."
 juzgar_text = "Esto confirma que esta casa esconde algo peor de lo que imaginaba."

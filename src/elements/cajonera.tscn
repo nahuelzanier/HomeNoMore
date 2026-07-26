@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://6ramntwsm42u"]
 
 [ext_resource type="Texture2D" uid="uid://cuhl083kmdqcd" path="res://assets/cajonera_abierta.png" id="1_30csx"]
+[ext_resource type="Script" uid="uid://bqisqmy8fco0y" path="res://src/elements/cajonera.gd" id="1_vjndh"]
 [ext_resource type="Texture2D" uid="uid://ccba67n4tks0p" path="res://assets/cajonera.png" id="2_rdg73"]
 [ext_resource type="PackedScene" uid="uid://b1kh88so136n7" path="res://src/elements/element.tscn" id="3_rdg73"]
 
@@ -27,6 +28,7 @@ animations = [{
 size = Vector2(205, 151)
 
 [node name="Cajonera" type="Node2D" unique_id=770608147]
+script = ExtResource("1_vjndh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1883980729]
 sprite_frames = SubResource("SpriteFrames_wq61u")
@@ -38,5 +40,8 @@ examinar_text = "Una cajonera de madera oscura, con las bisagras oxidadas."
 juzgar_text = "Algo en esta cajonera no me da buena espina."
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Element" unique_id=207200699]
-position = Vector2(2.5, -2.5)
+position = Vector2(0, -13)
 shape = SubResource("RectangleShape2D_wq61u")
+
+[connection signal="abrir_signal" from="Element" to="." method="_on_element_abrir_signal"]
+[connection signal="cerrar_signal" from="Element" to="." method="_on_element_cerrar_signal"]

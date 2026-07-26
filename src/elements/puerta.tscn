@@ -1,10 +1,20 @@
 [gd_scene format=3 uid="uid://cqhq8b7gcbp6c"]
 
 [ext_resource type="Texture2D" uid="uid://qauprqduvgvf" path="res://assets/puerta cerrada.png" id="1_cb86y"]
+[ext_resource type="Script" uid="uid://dhtp716wu8whl" path="res://src/elements/puerta.gd" id="1_k3new"]
+[ext_resource type="Texture2D" uid="uid://csoc4hf6w0b75" path="res://assets/puerta abierta.png" id="1_xe5gl"]
 [ext_resource type="PackedScene" uid="uid://b1kh88so136n7" path="res://src/elements/element.tscn" id="2_lqkda"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wq61u"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_xe5gl")
+}],
+"loop": 1,
+"name": &"abierta",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_cb86y")
@@ -15,19 +25,31 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wq61u"]
-size = Vector2(166, 108)
+size = Vector2(166, 213)
 
 [node name="Puerta" type="Node2D" unique_id=713235711]
+script = ExtResource("1_k3new")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=338315735]
+position = Vector2(-1, -59)
+sprite_frames = SubResource("SpriteFrames_wq61u")
+animation = &"cerrada"
+
+[node name="AnimatedSprite2DRev" type="AnimatedSprite2D" parent="." unique_id=483026943]
+position = Vector2(0, 58)
+rotation = 3.1415927
 sprite_frames = SubResource("SpriteFrames_wq61u")
 animation = &"cerrada"
 
 [node name="Element" parent="." unique_id=1051786103 instance=ExtResource("2_lqkda")]
+collision_mask = 0
 element_name = "Puerta"
 examinar_text = "Una puerta de madera maciza. Está cerrada."
 juzgar_text = "No quiero saber qué hay del otro lado. Pero tengo que averiguarlo."
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Element" unique_id=617165614]
-position = Vector2(0, 1)
+position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_wq61u")
+
+[connection signal="abrir_signal" from="Element" to="." method="_on_element_abrir_signal"]
+[connection signal="cerrar_signal" from="Element" to="." method="_on_element_cerrar_signal"]

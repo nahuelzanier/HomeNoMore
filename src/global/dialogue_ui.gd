@@ -11,6 +11,8 @@ func show_text(text: String) -> void:
 		return
 	label.text = text
 	panel.visible = true
+	await get_tree().create_timer(2.0).timeout
+	hide_text()
 
 func hide_text() -> void:
 	panel.visible = false

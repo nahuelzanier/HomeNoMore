@@ -38,6 +38,7 @@ animation = &"closed"
 [node name="Element" parent="." unique_id=1051786103 instance=ExtResource("3_gl210")]
 collision_layer = 4
 collision_mask = 0
+collectible = true
 element_name = "Libro"
 examinar_text = "Un libro viejo de tapa dura, con páginas amarillentas y algunas arrancadas."
 juzgar_text = "No sé si debería leerlo. Algo me dice que no me va a gustar lo que dice."

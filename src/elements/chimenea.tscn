@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://llj653k81lm0"]
+
+[ext_resource type="Script" uid="uid://bfi8ajc00uu6y" path="res://src/elements/chimenea.gd" id="1_v7ny8"]
+[ext_resource type="Texture2D" uid="uid://e6f5aawnh1v7" path="res://assets/chimenea.png" id="1_whuwo"]
+[ext_resource type="PackedScene" uid="uid://b1kh88so136n7" path="res://src/elements/element.tscn" id="2_yhswt"]
+[ext_resource type="Texture2D" uid="uid://brr301cuyjxsv" path="res://assets/torchlight.png" id="3_xl3rg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wq61u"]
+size = Vector2(181, 131)
+
+[node name="Chimenea" type="Node2D" unique_id=266554114]
+script = ExtResource("1_v7ny8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1820160155]
+texture = ExtResource("1_whuwo")
+
+[node name="Element" parent="." unique_id=1051786103 instance=ExtResource("2_yhswt")]
+element_name = "Chimenea"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Element" unique_id=1762973725]
+position = Vector2(1.5, 3.5)
+shape = SubResource("RectangleShape2D_wq61u")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=17233800]
+position = Vector2(0, 43)
+color = Color(0.8745098, 0.16470589, 0, 1)
+energy = 1.45
+texture = ExtResource("3_xl3rg")
