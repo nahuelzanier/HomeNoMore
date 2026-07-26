@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://brpcclxpx0bwl"]
 
 [ext_resource type="Texture2D" uid="uid://ivngfqy80wab" path="res://assets/candado abierto.png" id="1_dohct"]
+[ext_resource type="Script" uid="uid://bl6pdmygg3emr" path="res://src/elements/candado.gd" id="1_p17so"]
 [ext_resource type="Texture2D" uid="uid://bxgy8psmlwya5" path="res://assets/candado.png" id="2_46r2b"]
 [ext_resource type="PackedScene" uid="uid://b1kh88so136n7" path="res://src/elements/element.tscn" id="3_46r2b"]
 
@@ -28,6 +29,7 @@ radius = 23.0
 height = 60.0
 
 [node name="Candado" type="Node2D" unique_id=2095320705]
+script = ExtResource("1_p17so")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=261069234]
 scale = Vector2(0.3, 0.3)
@@ -44,3 +46,6 @@ juzgar_text = "Alguien no quería que esto se abriera fácilmente."
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Element" unique_id=1010240340]
 position = Vector2(1, 1)
 shape = SubResource("CapsuleShape2D_7j5g0")
+
+[connection signal="abrir_signal" from="Element" to="." method="_on_element_abrir_signal"]
+[connection signal="cerrar_signal" from="Element" to="." method="_on_element_cerrar_signal"]

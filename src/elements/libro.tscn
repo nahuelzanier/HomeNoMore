@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://c52xaljck6uem"]
 
+[ext_resource type="Script" uid="uid://cej86npkme4kp" path="res://src/elements/libro.gd" id="1_2f5qf"]
 [ext_resource type="Texture2D" uid="uid://cldclofm85tg8" path="res://assets/libro cerrado.png" id="1_w6hir"]
 [ext_resource type="Texture2D" uid="uid://drma5emw1wcv4" path="res://assets/lbro.png" id="2_gl210"]
 [ext_resource type="PackedScene" uid="uid://b1kh88so136n7" path="res://src/elements/element.tscn" id="3_gl210"]
@@ -29,6 +30,7 @@ size = Vector2(44, 47)
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_wq61u"]
 
 [node name="Libro" type="Node2D" unique_id=1227931376]
+script = ExtResource("1_2f5qf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1605313724]
 scale = Vector2(0.25, 0.25)
@@ -48,3 +50,6 @@ shape = SubResource("RectangleShape2D_gl210")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=1662751001]
 occluder = SubResource("OccluderPolygon2D_wq61u")
+
+[connection signal="abrir_signal" from="Element" to="." method="_on_element_abrir_signal"]
+[connection signal="cerrar_signal" from="Element" to="." method="_on_element_cerrar_signal"]

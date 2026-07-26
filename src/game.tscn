@@ -214,8 +214,9 @@ locked = true
 [node name="Puerta2" parent="Elements" unique_id=322358461 instance=ExtResource("17_b6dhc")]
 position = Vector2(-1146, 683)
 
-[node name="Puerta3" parent="Elements" unique_id=648171853 instance=ExtResource("17_b6dhc")]
+[node name="PuertaSalida" parent="Elements" unique_id=648171853 instance=ExtResource("17_b6dhc")]
 position = Vector2(219, -3)
+locked = true
 
 [node name="Puerta4" parent="Elements" unique_id=23025512 instance=ExtResource("17_b6dhc")]
 position = Vector2(449, 682)
@@ -311,7 +312,7 @@ position = Vector2(541, 153)
 position = Vector2(624, 83)
 
 [node name="CandeleroPen1" parent="Elements" unique_id=1990111789 instance=ExtResource("14_a7soy")]
-position = Vector2(-455, 262)
+position = Vector2(-434, 280)
 
 [node name="CandeleroPen2" parent="Elements" unique_id=1424087545 instance=ExtResource("14_a7soy")]
 position = Vector2(-625, 174)
@@ -357,7 +358,7 @@ position = Vector2(584, 341)
 
 [node name="Player" parent="." unique_id=1711795095 instance=ExtResource("2_xq6wo")]
 z_index = 2
-position = Vector2(-1020, 1096)
+position = Vector2(217, 196)
 rotation = 1.5707964
 
 [connection signal="body_entered" from="MouseArea" to="MouseArea" method="_on_body_entered"]

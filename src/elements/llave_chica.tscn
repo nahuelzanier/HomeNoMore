@@ -16,7 +16,7 @@ texture = ExtResource("1_m0vge")
 collision_layer = 4
 collision_mask = 0
 collectible = true
-element_name = "Llave"
+element_name = "Llavecita"
 examinar_text = "Una llave pequeña y delicada, probablemente de un cofre o un cajón."
 juzgar_text = "Espero que abra algo que valga la pena el riesgo."
 

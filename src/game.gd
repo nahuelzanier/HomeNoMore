@@ -21,8 +21,6 @@ func _on_candelero_pen_switch(number: Variant, state: Variant) -> void:
 	pentagram[(number-1)%5].switch_it()
 
 func _on_puerta_locked_check_lock() -> void:
-	print(cajonera_1.opened)
-	print(cajonera_2.opened)
 	if cajonera_1.opened and cajonera_2.opened:
 		puerta_locked.locked = false
 		puerta_locked.open()
