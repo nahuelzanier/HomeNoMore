@@ -24,6 +24,7 @@ DialogueUI="*res://src/global/dialogue_ui.tscn"
 
 window/size/viewport_width=1372
 window/size/viewport_height=686
+window/size/mode=3
 window/stretch/mode="viewport"
 
 [input]

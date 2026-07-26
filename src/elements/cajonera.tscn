@@ -35,6 +35,7 @@ sprite_frames = SubResource("SpriteFrames_wq61u")
 animation = &"cerrada"
 
 [node name="Element" parent="." unique_id=1051786103 instance=ExtResource("3_rdg73")]
+movable = false
 element_name = "Cajonera"
 examinar_text = "Una cajonera de madera oscura, con las bisagras oxidadas y con olor a medias."
 juzgar_text = "Mirala vos, aca en un rincon con chupando medias. Una vez cajonera siempre cajonera."

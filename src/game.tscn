@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://clo2bbpryuyn2" path="res://src/mouse_area.gd" id="1_bs6l1"]
 [ext_resource type="PackedScene" uid="uid://ddxhw5d3urcy3" path="res://src/elements/element_empty.tscn" id="2_b6dhc"]
 [ext_resource type="Script" uid="uid://cc613fouqj6au" path="res://src/fade_from_black.gd" id="2_ra4no"]
+[ext_resource type="AudioStream" uid="uid://bju1ner56ga5b" path="res://assets/MDJ-2026-BGM1.ogg" id="2_xcy6g"]
 [ext_resource type="PackedScene" uid="uid://bk5upsl24q4ql" path="res://src/player.tscn" id="2_xq6wo"]
 [ext_resource type="PackedScene" uid="uid://6s0uys3wgcv3" path="res://src/elements/rata.tscn" id="4_4bcji"]
 [ext_resource type="PackedScene" uid="uid://mxpxi4k2cx0j" path="res://src/elements/silla.tscn" id="4_cdx1q"]
@@ -59,6 +60,10 @@ radius = 3.0
 
 [node name="Game" type="Node2D" unique_id=950554728]
 script = ExtResource("1_6fytc")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=690875684]
+stream = ExtResource("2_xcy6g")
+autoplay = true
 
 [node name="FadeFromBlack" type="CanvasLayer" parent="." unique_id=965958615]
 script = ExtResource("2_ra4no")
@@ -117,6 +122,14 @@ shape = SubResource("RectangleShape2D_dogsu")
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D" unique_id=711248589]
 position = Vector2(-99, 1202.5)
+shape = SubResource("RectangleShape2D_dogsu")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D" unique_id=348221134]
+position = Vector2(-104, 517)
+shape = SubResource("RectangleShape2D_dogsu")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="StaticBody2D" unique_id=1675721672]
+position = Vector2(-104, 158)
 shape = SubResource("RectangleShape2D_dogsu")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1217105978]
@@ -281,7 +294,7 @@ position = Vector2(-765, 1145)
 rotation = 1.9285889
 
 [node name="Skull1" parent="Elements" unique_id=671778271 instance=ExtResource("6_wqvko")]
-position = Vector2(1198, 587)
+position = Vector2(1145, 798)
 rotation = 1.134464
 
 [node name="LlaveChica1" parent="Elements" unique_id=228588982 instance=ExtResource("10_y2hwx")]

@@ -2,6 +2,7 @@ extends StaticBody2D
 class_name Element
 
 @export var collectible : bool = false
+@export var movable : bool = true
 @export var element_name : String = ""
 @export_multiline var examinar_text : String = ""
 @export_multiline var juzgar_text : String = ""
@@ -83,9 +84,10 @@ func recolectar():
 
 
 func _on_pop_direccion_id_pressed(id: int) -> void:
-	if id == 0:
-		DialogueUI.show_text(mover_text)
-		get_parent().global_position += Vector2(-200, 0)
-	else:
-		DialogueUI.show_text(mover_text)
-		get_parent().global_position += Vector2(200, 0)
+	if movable:
+		if id == 0:
+			DialogueUI.show_text(mover_text)
+			get_parent().global_position += Vector2(-200, 0)
+		else:
+			DialogueUI.show_text(mover_text)
+			get_parent().global_position += Vector2(200, 0)

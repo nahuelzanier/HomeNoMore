@@ -15,6 +15,7 @@ texture = ExtResource("1_81x1v")
 [node name="Element" parent="." unique_id=1051786103 instance=ExtResource("2_ei87r")]
 collision_layer = 4
 collision_mask = 0
+element_name = "Alfombra"
 examinar_text = "Una alfombra persa... que dice made in china en un tag..."
 juzgar_text = "Si las personas fueran tan autenticas como esta alfombra al menos..."
 abrir_text = "Es una alfombra y ya esta desplegada!"

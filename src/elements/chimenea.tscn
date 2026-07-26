@@ -15,6 +15,7 @@ script = ExtResource("1_v7ny8")
 texture = ExtResource("1_whuwo")
 
 [node name="Element" parent="." unique_id=1051786103 instance=ExtResource("2_yhswt")]
+movable = false
 element_name = "Chimenea"
 examinar_text = "El fuego todavia arde? Quiza las ratas aprendieron a prender fuego?"
 juzgar_text = "No te quejes de estar solo, si todo lo que tocas se destruye!"

@@ -30,9 +30,11 @@ func switch_it():
 		turn_on()
 
 func _on_element_abrir_signal() -> void:
-	emit_signal("switch", pentagram_id, true)
-	turn_on()
+	if not prendida:
+		emit_signal("switch", pentagram_id, true)
+		turn_on()
 
 func _on_element_cerrar_signal() -> void:
-	emit_signal("switch", pentagram_id, false)
-	turn_off()
+	if prendida:
+		emit_signal("switch", pentagram_id, false)
+		turn_off()
