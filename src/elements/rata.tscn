@@ -20,7 +20,11 @@ texture = ExtResource("1_gmmau")
 collectible = true
 element_name = "Rata"
 examinar_text = "Ahhh, una rata! No, es solo un juguete de goma."
-juzgar_text = "Detesto las ratas. Espero que no sea una señal de algo peor."
+juzgar_text = "Dicen que naci en el año de la rata y que tengo cara de rata y que trabajo como vendedor de seguros."
+abrir_text = "Me hace acordar a las clases de biologia..."
+cerrar_text = "Tiene un silbato, parece un juguete de perro."
+golpear_text = "Squequie!"
+recolectar_text = "Se lo voy a llevar a mi perrita, capaz le guste el juguetito."
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Element" unique_id=1567681696]
 shape = SubResource("CircleShape2D_wq61u")

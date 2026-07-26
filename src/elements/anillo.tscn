@@ -17,8 +17,13 @@ collision_layer = 4
 collision_mask = 0
 collectible = true
 element_name = "Anillo"
-examinar_text = "Un anillo de oro deslustrado, con un grabado casi ilegible."
-juzgar_text = "Alguien lo dejó aquí a propósito. Nadie olvida un anillo así."
+examinar_text = "Un anillo de cromo pulido, capaz un vendedor ambulante?"
+juzgar_text = "Un Anillo para gobernarlos a todos, un Anillo para encontrarlos, un Anillo para atraerlos a todos y atarlos en las tinieblas. Tres por 2000 pesos."
+abrir_text = "Un anillo abierto es solo un trozo de chapa."
+cerrar_text = "Es un anillo... por definicion ya es cerrado."
+golpear_text = "Bling bling ping"
+mover_text = "Andar pateando un anillo de aca para alla."
+recolectar_text = "Me recuerda al que le di a mi mujer y por eso me dejo, jaja... sniff."
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Element" unique_id=862024580]
 shape = SubResource("CircleShape2D_wq61u")

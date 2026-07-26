@@ -15,6 +15,13 @@ texture = ExtResource("1_81x1v")
 [node name="Element" parent="." unique_id=1051786103 instance=ExtResource("2_ei87r")]
 collision_layer = 4
 collision_mask = 0
+examinar_text = "Una alfombra persa... que dice made in china en un tag..."
+juzgar_text = "Si las personas fueran tan autenticas como esta alfombra al menos..."
+abrir_text = "Es una alfombra y ya esta desplegada!"
+cerrar_text = "Eso levantaria mucho polvo y seria pesimo para mi rinitis."
+golpear_text = "Puff puff... COUGH COUGH!"
+mover_text = "Capaz encuentre alguna moneda bajo la alfombra."
+recolectar_text = "Muy grande para rollo de pergamino..."
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Element" unique_id=91234106]
 position = Vector2(0, -1.5)

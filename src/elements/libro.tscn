@@ -42,8 +42,13 @@ collision_layer = 4
 collision_mask = 0
 collectible = true
 element_name = "Libro"
-examinar_text = "Un libro viejo de tapa dura, con páginas amarillentas y algunas arrancadas."
-juzgar_text = "No sé si debería leerlo. Algo me dice que no me va a gustar lo que dice."
+examinar_text = "Un tomo viejo de tapa dura, alguien arranco el final de la historia!"
+juzgar_text = "Y yo ahora me creo critico literario, jaja"
+abrir_text = "A veces la gente esconde alcohol dentro de libros, me vendria bien!"
+cerrar_text = "No hay tiempo para literatura"
+golpear_text = "Rrriip! Olvide mis pañuelos, capaz puedo usar una de estas hojas para sonarme la nariz."
+mover_text = "Unos estantes vendrian bien para estos tomos."
+recolectar_text = "Quiza lo lea mas tarde o lo prenda fuego si me aburro."
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Element" unique_id=2116556532]
 shape = SubResource("RectangleShape2D_gl210")

@@ -36,8 +36,10 @@ animation = &"cerrado"
 [node name="Element" parent="." unique_id=1051786103 instance=ExtResource("3_xwup5")]
 position = Vector2(1, -1)
 element_name = "Cofre"
-examinar_text = "Un cofre de madera reforzado con placas metálicas, cerrado con un candado."
-juzgar_text = "Sea lo que sea que guarda, no creo que lo pusieron ahí para protegerlo. Lo pusieron ahí para esconderlo."
+examinar_text = "Un alijo en la pared, parece bastante impractico la verdad."
+juzgar_text = "Si esta vacio no cumple ningun proposito aunque parezca bonito."
+mover_text = "Esta atornillado a la pared, alguien queria mas el alijo que lo que habia dentro..."
+recolectar_text = "Esta atornillado a la pared."
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Element" unique_id=192151640]
 position = Vector2(-1, 9.5)

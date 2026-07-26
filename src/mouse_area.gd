@@ -8,7 +8,7 @@ func _process(delta: float) -> void:
 	global_position = get_global_mouse_position()
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("action") and not current_body.is_empty():
+	if event.is_action_released("action") and not current_body.is_empty():
 		current_body[-1].activate_pop_up_menu()
 	if event.is_action_released("action"):
 		element_empty.activate_pop_up_menu()

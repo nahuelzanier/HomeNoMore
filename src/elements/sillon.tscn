@@ -17,8 +17,13 @@ texture = ExtResource("2_vmml0")
 
 [node name="Element" parent="." unique_id=1051786103 instance=ExtResource("1_bif7l")]
 element_name = "Sillon"
-examinar_text = "Un sillón viejo, con la tela desgastada y manchada."
-juzgar_text = "Me incomoda pensar en quién se sentó aquí por última vez."
+examinar_text = "Un sillón viejo, con la tela desgastada y manchada. Da un poco de asquete sentarse."
+juzgar_text = "La vejez nos llega a todos parece."
+abrir_text = "No quiero descanzar aqui, esta muy sucio."
+cerrar_text = "Mejor en otro momento."
+golpear_text = "Rrrrip... Una moneda!"
+mover_text = "Uff, como pesa!"
+recolectar_text = "Mi espalda no me lo permite."
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Element" unique_id=1551667734]
 position = Vector2(-1, 3)

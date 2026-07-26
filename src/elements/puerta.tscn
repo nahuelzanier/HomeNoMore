@@ -44,8 +44,13 @@ animation = &"cerrada"
 [node name="Element" parent="." unique_id=1051786103 instance=ExtResource("2_lqkda")]
 collision_mask = 0
 element_name = "Puerta"
-examinar_text = "Una puerta de madera maciza. Está cerrada."
-juzgar_text = "No quiero saber qué hay del otro lado. Pero tengo que averiguarlo."
+examinar_text = "Una puerta, estas en general dan a otras habitaciones. Algunas incluso a la legendaria calle."
+juzgar_text = "Las puertas impiden el paso de indeseados, pero tambien te instan a quedarte dentro."
+abrir_text = "Veamos que hay detras de la puerta numero..."
+cerrar_text = "Espero nadie me este siguiendo..."
+golpear_text = "Knock Knock... Hola?"
+mover_text = "Es una puerta, esta enganchada a las bizagras..."
+recolectar_text = "Es una puerta, esta enganchada a las bizagras... y ademas es muy grande."
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Element" unique_id=617165614]
 position = Vector2(0, -0.5)

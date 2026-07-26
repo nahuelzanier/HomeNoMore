@@ -40,8 +40,13 @@ animation = &"cerrado"
 collision_layer = 4
 collision_mask = 0
 element_name = "Candado"
-examinar_text = "Un candado de hierro oxidado. Voy a necesitar la llave correcta para abrirlo."
-juzgar_text = "Alguien no quería que esto se abriera fácilmente."
+examinar_text = "Un candado de hierro oxidado, parec haber unos cuantos por la casa."
+juzgar_text = "Algunos ven los candados como muestra de compromiso, a mi solo me dan escozor."
+abrir_text = "Abrir candados sueltos en una casa abandonada?"
+cerrar_text = "Un candado cerrado es menos probable que cause accidentes."
+golpear_text = "Clonck clonk snap!"
+mover_text = "Puedo levantarlo, es solo un candado."
+recolectar_text = "Es pesado, viejo y occidado... mejor dejarlo en la primera oportunidad."
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Element" unique_id=1010240340]
 position = Vector2(1, 1)

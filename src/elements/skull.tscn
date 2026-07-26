@@ -18,8 +18,13 @@ texture = ExtResource("1_pmje4")
 [node name="Element" parent="." unique_id=1051786103 instance=ExtResource("2_6ketk")]
 collectible = true
 element_name = "Calavera"
-examinar_text = "Una calavera humana, amarillenta por el paso del tiempo."
-juzgar_text = "Esto confirma que esta casa esconde algo peor de lo que imaginaba."
+examinar_text = "Una calavera de plastico barata. Quiza sea Halloween."
+juzgar_text = "Que miras! Anda para alla bobo!"
+abrir_text = "Ser o no ser..."
+cerrar_text = "No ser mejor, llama menos la atencion."
+golpear_text = "Bonk! Auch!"
+mover_text = "Hagamos una pila de craneos!"
+recolectar_text = "No se para que, pero por que no?"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Element" unique_id=491657299]
 shape = SubResource("CircleShape2D_wq61u")

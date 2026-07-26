@@ -19,7 +19,12 @@ collision_mask = 0
 collectible = true
 element_name = "Llave"
 examinar_text = "Una llave grande y pesada, de hierro forjado."
-juzgar_text = "Se siente fría al tacto. Demasiado fría."
+juzgar_text = "Es tan fria que es molesta de tener cerca..."
+abrir_text = "Es una llave... abre otras cosas"
+cerrar_text = "Es una llave... cierra otras cosas"
+golpear_text = "Cling, cling"
+mover_text = "Toma esto llave!"
+recolectar_text = "Capaz encuentre un castillo medieval y abra algo."
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Element" unique_id=263053023]
 shape = SubResource("CapsuleShape2D_wq61u")

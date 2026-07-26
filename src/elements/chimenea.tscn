@@ -16,6 +16,13 @@ texture = ExtResource("1_whuwo")
 
 [node name="Element" parent="." unique_id=1051786103 instance=ExtResource("2_yhswt")]
 element_name = "Chimenea"
+examinar_text = "El fuego todavia arde? Quiza las ratas aprendieron a prender fuego?"
+juzgar_text = "No te quejes de estar solo, si todo lo que tocas se destruye!"
+abrir_text = "El fuego ya arde, debilmente pero las ratas parece gustarle..."
+cerrar_text = "Esas brasas van a arder por algunas horas mas."
+golpear_text = "Auch! Fuego quema!"
+mover_text = "Imposible mover un hogar, encendido aparte."
+recolectar_text = "Quiza me caliente los bolsillos un poco."
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Element" unique_id=1762973725]
 position = Vector2(1.5, 3.5)

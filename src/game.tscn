@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://ypkakx1uuk7l" path="res://src/game.gd" id="1_6fytc"]
 [ext_resource type="Script" uid="uid://clo2bbpryuyn2" path="res://src/mouse_area.gd" id="1_bs6l1"]
 [ext_resource type="PackedScene" uid="uid://ddxhw5d3urcy3" path="res://src/elements/element_empty.tscn" id="2_b6dhc"]
+[ext_resource type="Script" uid="uid://cc613fouqj6au" path="res://src/fade_from_black.gd" id="2_ra4no"]
 [ext_resource type="PackedScene" uid="uid://bk5upsl24q4ql" path="res://src/player.tscn" id="2_xq6wo"]
 [ext_resource type="PackedScene" uid="uid://6s0uys3wgcv3" path="res://src/elements/rata.tscn" id="4_4bcji"]
 [ext_resource type="PackedScene" uid="uid://mxpxi4k2cx0j" path="res://src/elements/silla.tscn" id="4_cdx1q"]
@@ -58,6 +59,17 @@ radius = 3.0
 
 [node name="Game" type="Node2D" unique_id=950554728]
 script = ExtResource("1_6fytc")
+
+[node name="FadeFromBlack" type="CanvasLayer" parent="." unique_id=965958615]
+script = ExtResource("2_ra4no")
+
+[node name="ColorRect" type="ColorRect" parent="FadeFromBlack" unique_id=817827336]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=262547860]
 z_index = 10
@@ -358,7 +370,7 @@ position = Vector2(584, 341)
 
 [node name="Player" parent="." unique_id=1711795095 instance=ExtResource("2_xq6wo")]
 z_index = 2
-position = Vector2(217, 196)
+position = Vector2(217, 160)
 rotation = 1.5707964
 
 [connection signal="body_entered" from="MouseArea" to="MouseArea" method="_on_body_entered"]

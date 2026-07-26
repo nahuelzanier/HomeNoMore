@@ -14,7 +14,10 @@ texture = ExtResource("2_rmkba")
 [node name="Element" parent="." unique_id=1051786103 instance=ExtResource("2_lxwcj")]
 element_name = "Mesa"
 examinar_text = "Una mesa cubierta de polvo, con marcas de arañazos en la superficie."
-juzgar_text = "No sé por qué, pero no quiero tocarla más de lo necesario."
+juzgar_text = "Se puede apreciar el trabajo de alguien que carga con todo y nunca se queja."
+abrir_text = "Es una mesa simple, no hay mucho que activar."
+cerrar_text = "Es una mesa simple, no hay mucho que cerrar."
+recolectar_text = "Es una mesa!"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Element" unique_id=798753316]
 position = Vector2(0, -9)

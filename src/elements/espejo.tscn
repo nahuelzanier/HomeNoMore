@@ -36,8 +36,13 @@ animation = &"sano"
 collision_layer = 4
 collision_mask = 0
 element_name = "Espejo"
-examinar_text = "Un espejo con el marco tallado, agrietado en una esquina."
-juzgar_text = "Por un segundo, juraría que mi reflejo se movió distinto a mí."
+examinar_text = "Un gran espejo para reflejar a una gran persona, y a mi tambien supongo."
+juzgar_text = "Miralo a ese espejo, treinta y siete, divorciado y sin hijos. Podria ser peor y vender seguros como yo."
+abrir_text = "Es solo un espejo o un portal a otra dimension igual a la nuestra pero donde soy zurdo?"
+cerrar_text = "Te ignoro."
+golpear_text = "Pling, Pling... quien llama..."
+mover_text = "Cual seria el mejor feng shui para esto?"
+recolectar_text = "Es muy grande."
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Element" unique_id=640280254]
 position = Vector2(-1, 13.5)

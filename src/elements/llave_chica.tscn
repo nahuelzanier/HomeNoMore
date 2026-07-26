@@ -17,8 +17,13 @@ collision_layer = 4
 collision_mask = 0
 collectible = true
 element_name = "Llavecita"
-examinar_text = "Una llave pequeña y delicada, probablemente de un cofre o un cajón."
-juzgar_text = "Espero que abra algo que valga la pena el riesgo."
+examinar_text = "Una llave pequeña y moderna. Seguro de algun candado o alijo."
+juzgar_text = "La ironia de ser una llave que abre algo valioso y no saber que ni donde."
+abrir_text = "Es una llave... abre otras cosas."
+cerrar_text = "Es una llave... cierra otras cosas."
+golpear_text = "Cling, cling"
+mover_text = "Uff"
+recolectar_text = "La puedo agregar a mi llavero para ostentar un poco."
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Element" unique_id=629274069]
 position = Vector2(-2, -5)

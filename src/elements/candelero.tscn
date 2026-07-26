@@ -77,8 +77,13 @@ animation = &"apagada"
 [node name="Element" parent="." unique_id=1051786103 instance=ExtResource("3_c443x")]
 collectible = true
 element_name = "Candela"
-examinar_text = "Un candelero de bronce, con cera derretida acumulada en la base."
-juzgar_text = "La cera todavía está tibia. Alguien estuvo aquí hace poco."
+examinar_text = "Un bloque de cera derretida con un candelero embebido... es como si hubiera ardido por una eternidad."
+juzgar_text = "Me solia gustar jugar con cera caliente, despues me enamore y tuve que dejarlo."
+abrir_text = "Solia fumar bastante, ahora solo cargo un encendedor por si naufrago en una isla."
+cerrar_text = "La linterna es mas practica, aunque hay algo mistico en una vela prendida."
+golpear_text = "Splat... Ah, quema!"
+mover_text = "Que vagancia patear velas."
+recolectar_text = "Capaz podria usarla para adornar una mesa?"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Element" unique_id=1474081809]
 scale = Vector2(0.5, 0.5)
