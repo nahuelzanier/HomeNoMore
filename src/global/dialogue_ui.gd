@@ -4,6 +4,19 @@ extends CanvasLayer
 @onready var label: Label = $Panel/Label
 @onready var timer: Timer = $Timer
 
+@onready var sound_knock: AudioStreamPlayer = $SoundKnock
+@onready var sound_juzgar: AudioStreamPlayer = $SoundJuzgar
+@onready var rata_squeak_susto: AudioStreamPlayer = $RataSqueakSusto
+@onready var rata_squeak_triste: AudioStreamPlayer = $RataSqueakTriste
+@onready var silla_knock: AudioStreamPlayer = $SillaKnock
+@onready var silla_move: AudioStreamPlayer = $SillaMove
+
+@onready var calavera_knock: AudioStreamPlayer = $CalaveraKnock
+@onready var calavera_move: AudioStreamPlayer = $CalaveraMove
+@onready var espejo_roto: AudioStreamPlayer = $EspejoRoto
+@onready var cajonera_knock: AudioStreamPlayer = $CajoneraKnock
+
+
 func _ready() -> void:
 	panel.visible = false
 

@@ -39,6 +39,7 @@ animation = &"cerrado"
 [node name="Element" parent="." unique_id=1051786103 instance=ExtResource("3_46r2b")]
 collision_layer = 4
 collision_mask = 0
+movable = false
 element_name = "Candado"
 examinar_text = "Un candado de hierro oxidado, parec haber unos cuantos por la casa."
 juzgar_text = "Algunos ven los candados como muestra de compromiso, a mi solo me dan escozor."

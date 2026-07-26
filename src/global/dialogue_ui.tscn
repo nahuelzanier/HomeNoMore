@@ -1,6 +1,14 @@
 [gd_scene format=3 uid="uid://hf82bf4n6e20"]
 
 [ext_resource type="Script" uid="uid://cpvop4wn1w4p" path="res://src/global/dialogue_ui.gd" id="1_dlgui"]
+[ext_resource type="AudioStream" uid="uid://bfklnrp1573ox" path="res://sound/sfx_puertaKnock.wav" id="2_tgdhu"]
+[ext_resource type="AudioStream" uid="uid://bxnf3y321peko" path="res://sound/sfx_juzgar.wav" id="3_mou5h"]
+[ext_resource type="AudioStream" uid="uid://d0lmmsytkih4c" path="res://sound/sfx_sillaKnock.wav" id="4_ki0td"]
+[ext_resource type="AudioStream" uid="uid://4srjtj5xexsy" path="res://sound/sfx_sillaMover.wav" id="5_isgxc"]
+[ext_resource type="AudioStream" uid="uid://lb7wdrhtwawk" path="res://sound/sfx_calaveraKnock.wav" id="6_pve3x"]
+[ext_resource type="AudioStream" uid="uid://p5yf1wq0d5he" path="res://sound/sfx_calaveraMover.wav" id="7_mhdkw"]
+[ext_resource type="AudioStream" uid="uid://00kciiglpfvh" path="res://sound/sfx_espejoRompiendose.wav" id="8_mhdkw"]
+[ext_resource type="AudioStream" uid="uid://n1tbk2qusbv" path="res://sound/sfx_cajoneraKnock.wav" id="9_d86j3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dlgui"]
 bg_color = Color(0.05, 0.05, 0.05, 0.85)
@@ -50,5 +58,33 @@ autowrap_mode = 3
 [node name="Timer" type="Timer" parent="." unique_id=387133845]
 wait_time = 4.0
 one_shot = true
+
+[node name="SoundKnock" type="AudioStreamPlayer" parent="." unique_id=483459693]
+stream = ExtResource("2_tgdhu")
+
+[node name="SoundJuzgar" type="AudioStreamPlayer" parent="." unique_id=64729912]
+stream = ExtResource("3_mou5h")
+
+[node name="RataSqueakSusto" type="AudioStreamPlayer" parent="." unique_id=1054757957]
+
+[node name="RataSqueakTriste" type="AudioStreamPlayer" parent="." unique_id=1116991515]
+
+[node name="SillaKnock" type="AudioStreamPlayer" parent="." unique_id=1265555655]
+stream = ExtResource("4_ki0td")
+
+[node name="SillaMove" type="AudioStreamPlayer" parent="." unique_id=2132886395]
+stream = ExtResource("5_isgxc")
+
+[node name="CalaveraKnock" type="AudioStreamPlayer" parent="." unique_id=737164216]
+stream = ExtResource("6_pve3x")
+
+[node name="CalaveraMove" type="AudioStreamPlayer" parent="." unique_id=749535432]
+stream = ExtResource("7_mhdkw")
+
+[node name="EspejoRoto" type="AudioStreamPlayer" parent="." unique_id=1628942819]
+stream = ExtResource("8_mhdkw")
+
+[node name="CajoneraKnock" type="AudioStreamPlayer" parent="." unique_id=1413377550]
+stream = ExtResource("9_d86j3")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

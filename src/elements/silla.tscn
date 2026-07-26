@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://mxpxi4k2cx0j"]
 
 [ext_resource type="PackedScene" uid="uid://b1kh88so136n7" path="res://src/elements/element.tscn" id="1_5uvqg"]
+[ext_resource type="Script" uid="uid://ciorul0tc4uw4" path="res://src/elements/silla.gd" id="1_f7gkd"]
 [ext_resource type="Texture2D" uid="uid://c7t10jgv4umn5" path="res://assets/silla.png" id="2_f7gkd"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wq61u"]
@@ -10,6 +11,7 @@ radius = 51.156624
 polygon = PackedVector2Array(-10, -65, 24, -47, 56, -14, 60, -18, 29, -49, -7, -70)
 
 [node name="Silla" type="Node2D" unique_id=1542240656]
+script = ExtResource("1_f7gkd")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1927691029]
 scale = Vector2(0.7, 0.7)

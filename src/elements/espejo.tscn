@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://c581b08qgqljp"]
 
+[ext_resource type="Script" uid="uid://cou4r70putptf" path="res://src/elements/espejo.gd" id="1_p2dye"]
 [ext_resource type="Texture2D" uid="uid://c4bdmlsu6rfrk" path="res://assets/espejo_roto.png" id="1_w16eo"]
 [ext_resource type="Texture2D" uid="uid://odxfnarca6cj" path="res://assets/espejo.png" id="1_xhsxm"]
 [ext_resource type="PackedScene" uid="uid://b1kh88so136n7" path="res://src/elements/element.tscn" id="2_w16eo"]
@@ -27,6 +28,7 @@ animations = [{
 size = Vector2(126, 47)
 
 [node name="Espejo" type="Node2D" unique_id=788358981]
+script = ExtResource("1_p2dye")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1549301594]
 sprite_frames = SubResource("SpriteFrames_wq61u")

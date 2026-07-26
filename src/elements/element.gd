@@ -49,9 +49,19 @@ func hide_menu():
 func _on_popup_menu_id_pressed(id: int) -> void:
 	call(Interactions.by_id[id])
 
-func examinar(): DialogueUI.show_text(examinar_text)
-func juzgar(): DialogueUI.show_text(juzgar_text)
+func examinar():
+	if get_parent().has_method("is_open_book") and get_parent().is_open_book():
+		DialogueUI.show_text(get_parent().book_text)
+	else:
+		DialogueUI.show_text(examinar_text)
+
+func juzgar():
+	DialogueUI.sound_juzgar.play()
+	DialogueUI.show_text(juzgar_text)
+
 func abrir():
+	if get_parent().has_method("soy_rata"):
+		DialogueUI.rata_squeak_susto.play()
 	if get_parent().has_method("is_locked") and get_parent().is_locked():
 		DialogueUI.show_text("Esta cerrado")
 		emit_signal("abrir_signal")
@@ -63,6 +73,16 @@ func cerrar():
 	emit_signal("cerrar_signal")
 
 func golpear():
+	if get_parent().has_method("soy_cajonera"):
+		DialogueUI.cajonera_knock.play()
+	if get_parent().has_method("soy_espejo"):
+		DialogueUI.espejo_roto.play()
+	if get_parent().has_method("soy_skull"):
+		DialogueUI.calavera_knock.play()
+	if get_parent().has_method("soy_silla"):
+		DialogueUI.silla_knock.play()
+	else:
+		DialogueUI.sound_knock.play()
 	DialogueUI.show_text(golpear_text)
 
 func mover():
@@ -71,6 +91,8 @@ func mover():
 
 func recolectar():
 	if Interactions.carried_item:
+		if get_parent().has_method("soy_rata"):
+			DialogueUI.rata_squeak_triste.play()
 		if get_parent().has_method("drop_effect"):
 			get_parent().drop_effect()
 		else:
@@ -86,8 +108,16 @@ func recolectar():
 func _on_pop_direccion_id_pressed(id: int) -> void:
 	if movable:
 		if id == 0:
+			if get_parent().has_method("soy_skull"):
+				DialogueUI.calavera_move.play()
+			if get_parent().has_method("soy_silla"):
+				DialogueUI.silla_move.play()
 			DialogueUI.show_text(mover_text)
 			get_parent().global_position += Vector2(-200, 0)
 		else:
+			if get_parent().has_method("soy_skull"):
+				DialogueUI.calavera_move.play()
+			if get_parent().has_method("soy_silla"):
+				DialogueUI.silla_move.play()
 			DialogueUI.show_text(mover_text)
 			get_parent().global_position += Vector2(200, 0)

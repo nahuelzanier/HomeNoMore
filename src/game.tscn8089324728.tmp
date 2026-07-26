@@ -70,17 +70,8 @@ autoplay = true
 [node name="FadeFromBlack" type="CanvasLayer" parent="." unique_id=965958615]
 script = ExtResource("2_ra4no")
 
-[node name="ColorRect" type="ColorRect" parent="FadeFromBlack" unique_id=817827336]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 0)
-
 [node name="TextureRect" type="TextureRect" parent="FadeFromBlack" unique_id=157022912]
 process_mode = 3
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -88,6 +79,14 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_0i0me")
 script = ExtResource("5_2gais")
+
+[node name="ColorRect" type="ColorRect" parent="FadeFromBlack" unique_id=817827336]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=262547860]
 z_index = 10

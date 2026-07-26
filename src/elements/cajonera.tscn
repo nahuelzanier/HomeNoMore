@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://bqisqmy8fco0y" path="res://src/elements/cajonera.gd" id="1_vjndh"]
 [ext_resource type="Texture2D" uid="uid://ccba67n4tks0p" path="res://assets/cajonera.png" id="2_rdg73"]
 [ext_resource type="PackedScene" uid="uid://b1kh88so136n7" path="res://src/elements/element.tscn" id="3_rdg73"]
+[ext_resource type="AudioStream" uid="uid://jwsbe3gf2c21" path="res://sound/sfx_cajonAbriendose.wav" id="5_wteka"]
+[ext_resource type="AudioStream" uid="uid://b0serjh5imigk" path="res://sound/sfx_cajonCerrandose.wav" id="6_n5kbt"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wq61u"]
 animations = [{
@@ -47,6 +49,12 @@ recolectar_text = "Y donde se supone que ponga esto?"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Element" unique_id=207200699]
 position = Vector2(0, -13)
 shape = SubResource("RectangleShape2D_wq61u")
+
+[node name="SoundAbrir" type="AudioStreamPlayer" parent="." unique_id=1111669163]
+stream = ExtResource("5_wteka")
+
+[node name="SoundCerrar" type="AudioStreamPlayer" parent="." unique_id=1002289920]
+stream = ExtResource("6_n5kbt")
 
 [connection signal="abrir_signal" from="Element" to="." method="_on_element_abrir_signal"]
 [connection signal="cerrar_signal" from="Element" to="." method="_on_element_cerrar_signal"]

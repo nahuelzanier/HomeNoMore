@@ -14,3 +14,13 @@ func fade_from_black(duration := 3.0):
 		0.0,
 		duration
 	)
+
+func fade_to_black(duration := 3.0):
+	process_mode = Node.PROCESS_MODE_ALWAYS
+	var tween = create_tween()
+	tween.tween_property(
+		color_rect,
+		"color:a",
+		1.0,
+		duration
+	)
